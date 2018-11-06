@@ -1,0 +1,49 @@
+* {
+    font-family: verdana;
+    margin: 0;
+}
+
+body{
+    background: #eee;
+}
+
+.wrapper{
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.flex-container {
+  display: flex;
+  background: #FFF;
+  flex-wrap: wrap;
+}
+
+.box {
+  height: 100px;
+  /* min-width: 브라우저 너비가 min-width 보다 작아지면 스크롤바가 생김 */
+  /* min-width: 200px
+
+  /* flex-basis: 브라우저 너비가 min-width 보다 작아지면 스크롤바가 생기지 않음 */
+  /* flex-basis: 200px; */
+  flex-grow: 1;
+
+  /* flex: flex-grow flex-shrink flex-basis; */
+  /* flex: 1 0 200px; */
+  /* flex: 1;  flex-grow: 1, flex-shrink: 1, flex-basis: 0; */
+}
+
+.one {
+  background: red;
+  flex-basis: 100px;
+}
+
+.two {
+  background: blue;
+  flex-basis: 200px;
+}
+
+.three {
+  background: green;
+  flex-basis: 300px;
+}

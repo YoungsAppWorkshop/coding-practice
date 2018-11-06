@@ -1,0 +1,50 @@
+* {
+    font-family: verdana;
+    margin: 0;
+}
+
+body{
+    background: #eee;
+}
+
+.wrapper{
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.flex-container {
+  display: flex;
+  background: #FFF;
+}
+
+
+.box {
+  height: 100px;
+  min-width: 100px;
+  /* flex-grow: 1; */
+}
+
+/*
+  flex-grow: growth rate
+  flex-container width - each box width = 660px
+  1/6
+ */
+
+.one {
+  background: red;
+  flex-grow: 1;
+  /* 100px + 660px * 1/6 = 210px */
+}
+
+.two {
+  background: blue;
+  flex-grow: 2;
+  /* 100px + 660px * 2/6 = 320px */
+}
+
+.three {
+  background: green;
+  flex-grow: 3;
+  /* 100px + 660px * 3/6 = 430px */
+}
