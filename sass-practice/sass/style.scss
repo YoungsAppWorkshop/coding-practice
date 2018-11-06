@@ -1,0 +1,138 @@
+@import 'partials/reset';
+@import 'partials/mixins';
+
+$primary-color: #000;
+$border-width: 2px;
+
+$container: 1440px;
+$padding: 25px;
+
+@function half-height($first, $second) {
+  @return $container / $first + $padding / $second;
+}
+
+.half {
+  height: half-height(2, 2);
+}
+
+.half1 {
+  height: half-height(2, 2);
+}
+
+.first-class {
+  color: $primary-color;
+  font-family: sans-serif;
+  text-decoration: underline;
+}
+
+.second-class {
+  @extend .first-class;
+  border-color: #fff;
+
+}
+
+.border-blue {
+  border-color: blue;
+}
+
+.border-red {
+  border-color: red;
+}
+
+// a {
+//   font-family: sans-serif;
+//   color: $primary-color;
+// }
+// a:hover, a:focus, a:visited {
+//   color: blue;
+// }
+// a.link-class {
+//   color: green;
+// }
+// a.link-class:hover, a.focus, a:visited {
+//   color: blue;
+// }
+
+a { font-family: sans-serif; color: $primary-color;
+  &:hover,
+  &.focus,
+  &:active { color: blue; }
+  &.link-class { color: green;
+    &:hover,
+    &.focus,
+    &:active { color: blue; }
+  }
+}
+
+.translateX {
+  @include translateX(15px);
+}
+
+.transformX {
+  @include translateX(15px);
+}
+
+.box1 {
+  @include animate-time;
+}
+.box2 {
+  @include animate-time(500ms);
+}
+
+// For loop
+// @for $var from <start> through <end>
+@for $space from 1 through 12
+{
+  .padding-top-#{$space}
+  {
+    padding-top: 10px * $space;
+  }
+}
+
+// @for $space from 1 through 6
+// {
+//   $width: percentage( 1 / $space );
+//   .colume-#{$space}
+//   {
+//     width: $width;
+//   }
+// }
+
+// WHILE loop
+// @while $var something int
+// $num: 6;
+// @while $num > 0
+// {
+//   $width: percentage( 1 / $num );
+//   .colume-#{$num}
+//   {
+//     width: $width ;
+//   }
+//   $num: $num - 1;
+// }
+
+// EACH loop
+// @each key, value in array {}
+$white: #FFF;
+$black: #000;
+$red: #F00;
+$primary: #CCC;
+$secondary: #333;
+
+$colours: (
+  'white': $white,
+  'black': $black,
+  'red': $red,
+  'primary': $primary,
+  'secondary': $secondary
+);
+
+// .text-white { color: #FFF; }
+// .text-black { color: #000; }
+@each $colour, $hex in $colours
+{
+  .text-#{$colour}
+  {
+    color: $hex; 
+  }
+}
