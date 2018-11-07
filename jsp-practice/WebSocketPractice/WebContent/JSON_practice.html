@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JSON Practice</title>
+</head>
+<body>
+	<h1>JSON Practice</h1>
+	<script>
+		var DeviceAction = {
+			action : "add",
+			name : "name",
+			type : "type",
+			description : "description"
+		};
+		
+		document.write("<h2>" + DeviceAction.action + "</h2>");
+		var jsonObject = JSON.stringify(DeviceAction);
+		document.write("<h3>" + jsonObject + "</h3>");
+		
+		var parsedObject = JSON.parse(jsonObject);
+		document.write("<h4>" + parsedObject.type + "</h4>");
+	</script>
+</body>
+</html>

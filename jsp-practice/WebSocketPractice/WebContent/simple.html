@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Websocket Tutorial 02</title>
+</head>
+<body>
+	<input type="hidden" id="userName" value="Joung">
+	<textarea id="messagesTextArea" cols="50" rows="10"></textarea>
+	<br />
+	<input type="text" id="messageText" size="50" />
+	<input type="button" onClick="sendMessage()" value="Send" />
+</body>
+<script type="text/javascript">
+	var socket = new WebSocket(
+			"ws://localhost:8080/WebSocketPractice/chatroomServerEndpoint")
+
+	// main 페이지 입장 시 : (소켓 연결 시)
+	socket.onopen = function openSocket() {
+		// 세션에 추가해야 하는 메시지 m_id, p_num 전송 
+		socket.send(userName.value);
+	}
+
+	// 서버로부터 메시지를 받았을 때, 
+	socket.onmessage = function processMessage(message) {
+		var jsonData = JSON.parse(message.data);
+		if (jsonData.message != null) {
+			messagesTextArea.value += jsonData.message + "\n";
+		} // close if
+
+	} // close function
+
+	// 메시지 전송 함수 
+	function sendMessage() {
+		var date = new Date();
+		socket.send(date);
+		messageText.value = "";
+	} // close function 
+
+	// main 페이지 이탈 시 : 브라우저 창 닫기 시 예외 발생 방지 함수 
+	window.onbeforeunload = function() {
+		socket.onclose = function() {
+		};
+		socket.close()
+	}; // close anonymous function
+
+</script>
+</html>

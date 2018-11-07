@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+	<h1 id="header">Old Header</h1>
+
+	<script>
+		var element = document.getElementById("header");
+		element.innerHTML = "New Header";
+		var sender = "sendy";
+		var receiver = "recipe";
+		
+		// startChat(sender, receiver);
+		
+		function startChat(sender, receiver) {
+			var url = "./ProjectList.pr?senderId=" + sender + "&receiverId="
+					+ receiver;
+			alert(url);
+		} // close function
+		var date1 = new Date(1480477074242);
+		var millisecond = date1.getTime().toString();
+		document.write("<p> Date() : " + date1 + "</p>");
+		document.write("<p> millisecond : " + millisecond + "</p>")
+
+	</script>
+
+</body>
+</html>
