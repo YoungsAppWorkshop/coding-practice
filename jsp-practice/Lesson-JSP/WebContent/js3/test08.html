@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이벤트/브라우저 객체(8) 7/18</title>
+<script type="text/javascript">
+	// document html문서 객체 - 이미지객체, 양식객체
+	// 양식객체 form 	- input, password, textarea
+	//				- checkbox, radio, select
+	// form 객체
+	// window.document.forms[0].속성
+	function fun1() {
+		alert("action : " + document.forms[0].action);
+		alert("method : " + document.forms[0].method);
+		alert("name : " + document.forms[0].name);
+	}
+	function fun2() {
+		// 	action : b.jsp수정 	전송.submit사용
+		document.fr.action = "b.jsp";
+		document.fr.method = "get";
+		document.fr.submit();
+	}
+	function fun3(a) {
+		// basket이면 basket.jsp로 이동
+		// order이면 order.jsp로 이동
+		if (a == 'basket') {
+			document.fr.action = "basket.jsp";
+			document.fr.submit();
+		} else if (a == 'order') {
+			document.fr.action = "order.jsp";
+			document.fr.submit();
+		}
+	}
+</script>
+</head>
+<body>
+	<h1>js3/test08.html</h1>
+	<h3>웹브라우저 객체</h3>
+	<ul>
+		<li>document.양식 객체</li>
+		<li>document.forms[0]</li>
+		<li>document.form이름(name 속성값)</li>
+	</ul>
+	<!-- <form action="서버이동할 페이지" method="전송방식" name="폼태그의 이름"></form> -->
+	<!-- action 서버페이지로 이동 -->
+	<!-- get 주소줄에서 값을 넘김, post http 안에 담아 값을 넘김 -->
+	<input type="button" value="Basket" onclick="fun3('basket')">
+	<input type="button" value="Order" onclick="fun3('order')">
+	<br>
+	<br>
+	<input type="button" value="폼 정보" onclick="fun1()">
+	<input type="button" value="폼 전송" onclick="fun2()">
+	<br>
+	<br>
+	<form action="a.jsp" method="post" name="fr">
+		<input type="text" name="num"> <input type="submit" value="전송">
+		<input type="reset" value="취소,초기화">
+	</form>
+</body>
+</html>

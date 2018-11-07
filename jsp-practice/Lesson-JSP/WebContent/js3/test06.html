@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이벤트/브라우저 객체(6) 7/14</title>
+<script type="text/javascript">
+	function fun1() {
+		alert("문서제목 : " + document.title);
+		alert("문서배경색 : " + document.bgcolor); // RGB #ffffff
+	}
+	function fun2() {
+		document.bgColor = "yellow";
+	}
+
+	function fun3(color) {
+		document.bgColor = color;
+	}
+</script>
+</head>
+<body>
+	<h1>js3/test06.html</h1>
+	<h3>웹브라우저 객체</h3>
+	<ul>
+		<li>window.document 객체</li>
+	</ul>
+	<input type="button" value="문서 객체 실습" onclick="fun1()">
+	<input type="button" value="배경 색상 변경" onclick="fun2()">
+	<br>
+	<br>
+	<input type="radio" name="bg" value="pink" onclick="fun3('pink')">Pink
+	<input type="radio" name="bg" value="green" onclick="fun3('green')">Green
+	<input type="radio" name="bg" value="blue" onclick="fun3('blue')">Blue
+	<input type="radio" name="bg" value="white" onclick="fun3('white')">White
+</body>
+</html>

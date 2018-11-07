@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>함수(1) 7/6</title>
+<script type="text/javascript">
+	// 함수 : 필요한 기능을 정의
+	//      사용할 때 함수의 이름을 호출해서 사용
+	//		함수 실행이 끝나면 함수 호출한 곳으로 되돌아옴
+
+	// 함수 정의
+
+	// 	function 함수이름() {
+	// 		// 자주 사용되는 명령문
+	// 	}
+
+	function star() {
+		// document.write("*****star함수*****<br>");
+		document.write("*****************<br>");
+	}
+
+	function star2(a, b) { // 매개변수a : 100을 저장할 기억장소
+		document.write(a + " , " + b + " : 함수 호출 시 받아온 값 <br>");
+	}
+
+	function star3() {
+		document.write("star3 함수 호출 <br>");
+		return "별";
+	}
+
+	function star4(a) {
+		document.write(a + "star4 함수 호출<br>")
+		return 50;
+	}
+
+	// 	alert("경고메시지");   << 내장 함수
+	document.write(star4("안녕") + 100 + "<br>");
+	document.write(star3() + "<br>");
+	star2(100, 200);
+	star();
+	document.write("홍길동<br>");
+	star();
+	document.write("이순신<br>");
+	star();
+	document.write("이몽룡<br>");
+	star();
+</script>
+</head>
+<body>
+	<h1>js2/test01.html</h1>
+	<h3>함수</h3>
+	<ul>
+		<li>사용자 함수</li>
+	</ul>
+</body>
+</html>

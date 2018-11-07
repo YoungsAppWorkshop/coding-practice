@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>연산자(3) 6/30</title>
+		<script type="text/javascript">
+		//	2. 단항연산자 		!(NOT) true => false, false => true
+		document.write("2. 단항연산자 		!(NOT)<br>");
+		a = true ;
+		document.write("a=" + a + "<br>") ;
+		document.write("Not a=" + !a + "<br>") ;
+		document.write("<br>");
+		
+		//	5. 논리연산자 		&&(AND)		||(OR)
+			// 논리연산자 AND : &&
+				// 	참 && 참 && 참 => 참
+				// 	참 && 거짓 => 거짓
+				// 	거짓 && 참 => 거짓
+				// 	거짓 && 거짓 => 거짓
+		document.write("5. 논리연산자 		AND : &&<br>");
+		a = 10 ;
+		b = 20 ;
+		document.write("a=" + a + "<br>") ;
+		document.write("b=" + b + "<br>") ;
+		document.write("<br>");
+
+		// 		a < b && a != b => true
+		// 		a < b && a == b => false
+		// 		a > b && a != b => false
+		// 		a > b && a == b => false
+		document.write(a + "<" + b + "&&" + a + "!=" + b + "=>" + (a < b && a != b) + "<br>") ;
+		document.write(a + "<" + b + "&&" + a + "==" + b + "=>" + (a < b && a == b) + "<br>") ;
+		document.write(a + ">" + b + "&&" + a + "!=" + b + "=>" + (a > b && a != b) + "<br>") ;
+		document.write(a + ">" + b + "&&" + a + "==" + b + "=>" + (a > b && a == b) + "<br>") ;
+		document.write("<br>");
+		
+		document.write((a < b)+ " && " + (a != b)+ " =>" + (a < b && a != b) + "<br>") ;
+		document.write((a < b)+ " && " + (a == b)+ " =>" + (a < b && a == b) + "<br>") ;
+		document.write((a > b)+ " && " + (a != b)+ " =>" + (a > b && a != b) + "<br>") ;
+		document.write((a > b)+ " && " + (a == b)+ " =>" + (a > b && a == b) + "<br>") ;
+		document.write("<br>");
+
+		age = 5;
+		result = age >= 10 && age <= 19 ? "10대" : "10대 아님" ;
+		document.write(age + " : " + result + "<br>") ;
+		
+		// 성별 주민번호 뒷자리 첫번째값 : 1 또는 3 "남", 2 또는 4 "여"
+		s = 4 ;
+// 		result = s % 2 == 1 ? "남" : "여" ;
+		result = s == 1 || s == 3 ? "남" : "여" ;
+		document.write( s + " : " + result + "<br>") ;
+		
+		</script>
+		
+	</head>
+	<body>
+		<h1>js1/test7.html</h1>
+		<h3>연산자 실습</h3>
+		<ul>
+			<li>단항연산자 !(NOT)</li>
+			<li>논리연산자	AND		OR</li>
+		</ul>
+	
+	</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>연산자(4) 7/4</title>
+		<script type="text/javascript">
+
+		// 7. 대입연산자		=	+=	-=	*=	/=	%=
+		//	변수 = 값, 식
+		//	대입 : 오른쪽 값이나 식 계산 결과값을 왼쪽의 기억장소 변수에 저장
+		a = 20 ;
+		a = a + 30 ;
+		document.write("a = " + a + "<br>");
+		a += 50 ;
+		document.write("a = " + a + "<br>");
+		a -= 50 ;
+		document.write("a = " + a + "<br>");
+		
+		// 2. 단항연산자	+,- (부호)	++, -- (1증가,1감소) 		
+		a = 10 ;
+		b = 10 ;
+		// 대입연산자 이용
+		a = a + 1 ;
+		document.write("a = " + a + "<br>");
+		// 확장대입연산자 이용
+		a += 1 ;
+		document.write("a = " + a + "<br>");
+		// 단항연산자 이용
+		a++ ;
+		document.write("a = " + a + "<br>");
+		
+		// 대입연산자 이용
+		a = a - 1 ;
+		document.write("a = " + a + "<br>");
+		// 확장대입연산자 이용
+		a -= 1 ;
+		document.write("a = " + a + "<br>");
+		// 단항연산자 이용
+		a-- ;
+		document.write("a = " + a + "<br>");
+		// 단항연산자 ++,-- 앞 뒤 연산순서 차이
+		a = 10 ;
+		b = 10 ;
+		// 출력, 1증가 => ++앞 : 선 계산, 후 출력
+		document.write("a = " + ++a + "<br>");
+		// 출력, 1증가 => 뒤++ : 선 출력, 후 계산
+		// 식중 ++앞 식 맨처음 계산, ++뒤 식 맨 뒤에 계산
+		document.write("b = " + b++ + "<br>");
+		document.write("b = " + b + "<br>");
+		document.write("<br>");
+		a = 10;
+		b = 10 ;
+		s = a++ + ++b ;
+		document.write("s = " + s + "<br>");
+		document.write("a = " + a + "<br>");
+		document.write("b = " + b + "<br>");
+		
+		</script>
+	</head>
+	<body>
+		<h1>js1/test8.html</h1>
+		<h3>연산자 실습</h3>
+		<ul>
+			<li>단항연산자</li>
+			<li>대입연산자</li>
+		</ul>
+	</body>
+</html>

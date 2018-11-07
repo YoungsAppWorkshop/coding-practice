@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>함수(4) 7/12</title>
+<script type="text/javascript">
+	// 자바스크립트 내장함수
+	// alert("경고메시지")
+	// confirm("확인, 취소 선택하세요")
+	// 확인 시 결과 : true/ 취소 시 결과 : false
+
+	// "가입하려면 확인 단추를 누르세요"
+	// 확인 => "가입해 주셔서 감사합니다."
+	// 취소 => "다음 기회에 다시 방문해 주세요."
+
+	// 	var yesNo;
+	// 	yesNo = confirm("가입하려면 확인 단추를 누르세요");
+	// 	if (yesNo) {
+	// 		alert("가입해 주셔서 감사합니다.");
+	// 	} else {
+	// 		alert("다음 기회에 다시 방문해 주세요.");
+	// 	}
+
+	// 대화상자 => 입력 => 결과 문자
+
+	// 	msg = prompt("이름을 입력하세요", "이름") ;
+	// 	alert(msg);
+
+	// a 숫자를 입력하세요
+	// b 숫자를 입력하세요
+	// 출력 : a + b = (a + b)
+
+	// 	var a;
+	// 	var b;
+	// 	a = prompt("a 숫자를 입력하세요", "");
+	// 	b = prompt("b 숫자를 입력하세요", "");
+	// 	a = parseFloat(a);
+	// 	b = parseFloat(b);
+	// 	document.write(a + "+" + b + "=" + (a + b) + "<br>");
+	// 	alert(a + "+" + b + "=" + (a + b));
+
+	// 수식 => 계산 eval(수식) => 계산결과
+	// 	msg = prompt("수식을 입력하세요", "예) 1+2")
+	// 	alert(msg + "=" + eval(msg));
+
+	//	isNaN(값)	: is Not a Number	숫자가 아니면(문자이면) true
+	//									숫자이면 false
+
+	msg = prompt("입력하세요", "")
+	a = isNaN(msg);
+	if (a) {
+		alert("숫자가 아닙니다.")
+	} else {
+		alert(parseFloat(msg) + 100);
+	}
+</script>
+</head>
+<body>
+	<h1>js2/test04.html</h1>
+	<h3>함수</h3>
+	<ul>
+		<li>내장 함수</li>
+	</ul>
+</body>
+</html>

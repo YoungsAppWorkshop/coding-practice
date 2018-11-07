@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+body{font-family: 'Nanum Gothic', sans-serif;} 
+section{border:1px solid black; margin:15px 0 0 0; width:1550px; height: 790px; background: #BDBDBD}
+#Info{margin:10px;border:1px solid black; width:1520px; height: 50px; background: white; text-align: center; padding: 5px;}
+#List{float:left; margin:10px;border:1px solid black; width:1150px; height: 690px;}
+#Prog{margin:10px;border:1px solid black; width:1125px; height: 250px; background: white;}
+#Content{float:left; margin:10px;border:1px solid black; width:350px; height:690px; background: #bdbdbd;}
+#board{float:left; margin:0 10px 10px 10px;border:1px solid black; width:550px; height: 400px; background: white;}
+#board_content{float:left; margin:0 10px 10px 10px;border:1px solid black; width:550px; height: 400px; background: white;}
+#notice{margin:10px; padding:5px; border:1px solid black; background: white; height: 200px;  }
+#recent_act{margin:10px; border:1px solid black; background: #e2e1e0; height:440px;}
+.m1{margin:10px 0 0 0; border:1px solid black;text-align: center; background: #03A9F4; color:white; font-weight: bold; padding:3px;}
+#n_title{color:white; font-weight: bold; padding:5px; background: #F44336; }
+.sub_m1{text-align: center; background: #b3e5fc; padding:3px;}
+#today_do{float:right; margin:10px; border:1px solid black; width:330px; height:230px; font-size: 14px;}
+#today_do td{height:35px;}
+.card {
+  background: #fff;
+  border-radius: 2px;
+  display: inline-block;
+  margin: 10px;
+  padding: 5px 0 0 0;
+  position: relative;
+  width: 300px;
+  height: 60px;
+  font-size:15px;
+  text-indent: 1em;
+}
+.card-1 {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  cursor: pointer;
+}
+
+.card-1:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  
+}
+</style>
+</head>
+<body>
+<section>	
+<div id="Info">
+	프로젝트명 : 협업 관리 웹사이트
+</div>
+<div id="List">
+	<div id="Prog">
+		프로젝트 진행도
+		<div id="today_do">
+			<table>
+				<tr><td>강수현</td><td style="width:80%;">todo</td><td style="width:10px;	"><input type="checkbox"></td></tr>
+				<tr><td>유현정</td><td>조원 초대, 정보 수정</td><td><input type="checkbox"></td></tr>
+				<tr><td>이원준</td><td>클래스, 유스케이스 다이어그램 분석</td><td><input type="checkbox"></td></tr>
+				<tr><td>이형진</td><td>프로토디자인 레이아웃 수정</td><td><input type="checkbox"></td></tr>
+				<tr><td>정용제</td><td>todo</td><td><input type="checkbox"></td></tr>
+				<tr><td>허원재</td><td>DB 설치</td><td><input type="checkbox"></td>	</tr>	
+			</table>
+		</div>
+	</div>
+	<div id="board">
+		게시판
+	</div>
+	<div id="board_content">
+		게시물내용
+	</div>
+</div>
+<div id="Content">
+	<div id="notice">
+		<div id="n_title" class="m1">프로토타입 UI 설계/ 검토</div>
+		<div class="m1">이번주 주요 일정</div>
+			<div class="sub_m1">DB설계 관련 세미나</div>
+			<div class="sub_m1">유스케이스 설계 관련 세미나 </div>
+			<div class="sub_m1">랜딩페이지 디자인 및 테마 검토 </div>
+		<div class="m1">참고사이트</div>
+	</div>
+	<div id="recent_act">
+		<div class="card card-1">
+			<div style="font-weight: bold;">서버관련공지</div>
+			<div style="color: #757575;font-size: 12px;">3시간전</div>
+			<div style="color: #9e9e9e;font-size: 12px;">데이터베이스 워크벤치 실행후 아이피부분을...</div>
+		</div>
+		<div class="card card-1">최근활동#1</div>
+		<div class="card card-1">최근활동#1</div>
+		<div class="card card-1">최근활동#1</div>
+		<div class="card card-1">최근활동#1</div>
+	</div>
+</div>
+</section>
+</body>
+</html>

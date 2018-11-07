@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Ajax Practice</title>
+</head>
+<script src="../js/jquery-3.1.0.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		// .getJSON()
+		$.getJSON('json3.jsp', function(data) {
+			$.each(data, function(index, item) {
+				$('table').append('<tr><td>' + item.name + '</td><td>' + item.passwd + '</td><td>'+item.name+'</td></tr>');
+			});
+		});
+
+	});
+</script>
+<body>
+	<!-- js4/json3.html -->
+	<table border="1">
+		<tr>
+			<td>아이디</td>
+			<td>비밀번호</td>
+			<td>이름</td>
+		</tr>
+	</table>
+</body>
+</html>

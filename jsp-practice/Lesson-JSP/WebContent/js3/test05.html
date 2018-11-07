@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이벤트/브라우저 객체(5) 7/14</title>
+<script type="text/javascript">
+	function fun1() {
+		alert("방문기록개수" + history.length);
+	}
+
+</script>
+</head>
+<body>
+	<h1>js3/test05.html</h1>
+	<h3>웹브라우저 객체</h3>
+	<ul>
+		<li>window.history 객체</li>
+	</ul>
+	<input type="button" value="방문기록개수" onclick="fun1()">
+	<input type="button" value="뒤로 가기" onclick="history.back()">
+	<input type="button" value="앞으로 가기" onclick="history.foward()">
+	<input type="button" value="뒤로 2번 가기" onclick="history.go(-2)">
+</body>
+</html>

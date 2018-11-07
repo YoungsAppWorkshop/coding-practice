@@ -1,0 +1,5 @@
+<% 
+String color1 = "yellow";
+String color2 = "pink";
+String color3 = "green";
+%>

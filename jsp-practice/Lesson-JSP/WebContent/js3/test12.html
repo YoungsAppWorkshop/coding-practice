@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이벤트/브라우저 객체(12) 7/19</title>
+<script type="text/javascript">
+	function check() {
+		if (document.fr.id.value == "") {
+			// if (document.getElementById("idd").value=="") {}
+			alert("아이디를 입력하세요");
+			document.fr.id.focus();
+			return false;
+		}
+		if (document.fr.id.value.length < 4 || document.fr.id.value.length > 6) {
+			alert("아이디는 4~6자 이내로 입력하세요");
+			document.fr.id.focus();
+			return false;
+		}
+		if (document.fr.pwd.value == "") {
+			alert("패스워드를 입력하세요");
+			document.fr.pwd.focus();
+			return false;
+		}
+		if (!document.fr.gender[0].checked && !document.fr.gender[1].checked) {
+			alert("성별을 입력하세요");
+			document.fr.gender[0].focus();
+			return false;
+		}
+		if (!document.fr.interest[0].checked && !document.fr.interest[1].checked
+				&& !document.fr.interest[2].checked) {
+			alert("취미를 입력하세요");
+			document.fr.interest[0].focus();
+			return false;
+		}
+		if (document.fr.grade.selectedIndex == 0) {
+			alert("등급을 선택하세요");
+			document.fr.grade.focus();
+			return false;
+		}
+		if (document.fr.tx.value == "") {
+			alert("자기소개를 입력하세요");
+			document.fr.tx.focus();
+			return false;
+		}
+	}
+</script>
+</head>
+<body>
+	<h1>js3/test12.html</h1>
+	<h3>웹브라우저 객체</h3>
+	<ul>
+		<li>총정리</li>
+	</ul>
+	<form action="a.jsp" method="get" name="fr" onsubmit="return check()">
+		아이디 : <input type="text" name="id" id="idd"><br> 비밀번호 : <input
+			type="password" name="pwd"><br> 성별 : <input type="radio"
+			name="gender" value="male">남 <input type="radio"
+			name="gender" value="female">여 <br> 취미 : <input
+			type="checkbox" name="interest" value="travel">여행 <input
+			type="checkbox" name="interest" value="reading">독서 <input
+			type="checkbox" name="interest" value="game">게임 <br> <br>
+		등급 : <select name="grade">
+			<option value="">등급을 선택하세요</option>
+			<option value="1">1등급</option>
+			<option value="2">2등급</option>
+			<option value="3">3등급</option>
+		</select> <br> <br> 자기소개 :
+		<textarea name="tx" rows="5" cols="30"></textarea>
+		<br> <br> <input type="submit" value="전송">
+	</form>
+</body>
+</html>

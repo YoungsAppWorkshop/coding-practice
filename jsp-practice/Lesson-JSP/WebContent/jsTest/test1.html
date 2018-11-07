@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>test1.html</title>
+<script type="text/javascript">
+	// 배열선언, 10개 숫자 값 저장, 홀수의 개수, 짝수의 개수
+	document.write("<br>--홀수와 짝수의 개수 출력--<br>");
+	numbers = new Array(3, 4, 87, 17, 2, 6, 7, 14, 203, 11);
+	var countEven = 0, countOdd = 0;
+	for (var i = 0; i < numbers.length; i++) {
+		remainder = numbers[i] % 2;
+		if (remainder == 0) {
+			countEven++;
+		} else {
+			countOdd++;
+		}
+	}
+	document.write("홀수의 개수 : " + countOdd + "<br>짝수의 개수 : " + countEven
+			+ "<br>")
+	// 1~100 3의 배수이면서 5의 배수 출력
+	document.write("<br>--3과 5의 공배수 출력--<br>");
+	for (var j = 1; j <= 100; j++) {
+		remainderA = j % 3;
+		remainderB = j % 5;
+		if (remainderA == 0 && remainderB == 0) {
+			document.write(j + "<br>");
+		}
+	}
+	// a~b 두수 사이의 합계, 평균 출력
+	document.write("<br>--두수 사이의 합계, 평균 출력--<br>");
+	var a = 1, b = 100;
+	var count = 0, sum = 0, avg;
+	for (var k = a; k <= b; k++) {
+		sum += k;
+		count++;
+	}
+	avg = sum / count;
+	document.write("합계 : " + sum + "<br>평균 : " + avg + "<br>");
+	// 구구단 출력
+	document.write("<br>--구구단 출력--<br>");
+	for (var dan = 2; dan <= 9; dan++) {
+		document.write("<br>" + dan + " 단 출력<br>");
+		for (var l = 1; l <= 9; l++) {
+			document.write(dan + " * " + l + " = " + (dan * l) + "<br>");
+		}
+	}
+</script>
+</head>
+<body>
+	<h1>test1.html</h1>
+</body>
+</html>

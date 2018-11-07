@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Ajax Practice</title>
+</head>
+<script src="../js/jquery-3.1.0.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		// .getJSON()
+		$.getJSON('json2.jsp', function(data) {
+			$.each(data, function(index, item) {
+				$('table').append('<tr><td>' + item.name + '</td><td>' + item.gender + '</td><td>'+item.part+'</td></tr>');
+			});
+		});
+
+	});
+</script>
+<body>
+	<!-- js4/json2.html -->
+	<table border="1">
+		<tr>
+			<td>name</td>
+			<td>gender</td>
+			<td>part</td>
+		</tr>
+	</table>
+</body>
+</html>

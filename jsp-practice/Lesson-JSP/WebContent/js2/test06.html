@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>내장객체(2) 7/13</title>
+<script type="text/javascript">
+	//Date날짜 객체
+
+	//	객체 생성
+	// 	날짜변수 = new Date(); 						//현시스템 날짜 시간 설정
+	// 	날짜변수 = new Date(년, 월, 일); 			//특정 날짜
+	// 	날짜변수 = new Date(년, 월, 일, 시, 분, 초); 	//특정 날짜,시간
+
+	//	속성		(생략)
+	//	매서드()	년	getFullYear()	
+	//			월	getMonth() 		>> 출력값 0~11 	>> 1~12월
+	//			일	getDate()	
+	//			요일	getDay()		>> 출력값 0~6 		>> 일~토
+	// 			시	getHours()	분getMinutes() 초 getSeconds()
+
+	var today = new Date();
+	var dayOfWeek; // 요일 변수
+	dayOfWeek = dayfun(today.getDay());
+
+	document.write("오늘은 " + today.getFullYear() + "년 ");
+	document.write((today.getMonth() + 1) + "월 " + today.getDate() + "일 ");
+	document.write(dayOfWeek + "요일입니다.<br>");
+
+	document.write("현재 시간은 " + today.getHours() + "시 ");
+	document.write(today.getMinutes() + "분 ");
+	document.write(today.getSeconds() + "초입니다.<br>");
+
+	// 함수 정의 : 숫자형 요일(0~6)을 문자형(일~토)으로 반환
+	function dayfun(x) {
+		var day;
+		switch (x) {
+		case 0:
+			day = '일';
+			break;
+		case 1:
+			day = '월';
+			break;
+		case 2:
+			day = '화';
+			break;
+		case 3:
+			day = '수';
+			break;
+		case 4:
+			day = '목';
+			break;
+		case 5:
+			day = '금';
+			break;
+		case 6:
+			day = '토';
+		}
+		return day;
+	}
+</script>
+</head>
+<body>
+	<h1>js2/test06.html</h1>
+	<h3>내장 객체</h3>
+	<ul>
+		<li>Date - 날짜 객체</li>
+	</ul>
+</body>
+</html>
